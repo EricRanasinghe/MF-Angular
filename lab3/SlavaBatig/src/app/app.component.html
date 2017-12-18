@@ -1,0 +1,41 @@
+<input placeholder="Enter the name BOJE 1.5 CHASA IZ-ZA ODNOGO TIRE RLY" [(ngModel)]="currentUserName" />
+<br>
+<select (change)="getActivity($event.target.value)">
+  <option value = "" disabled selected> Select activity </option>
+  <option> Active </option>
+  <option> Unactive </option>
+  </select>
+  <br>
+<button (click)="addUser()"> Add </button>
+
+ <p></p>
+
+  <table border="1">
+    <tr>
+      <td> Active to Unactive </td>
+      <td> Unactive to Active </td>
+    </tr>
+
+    <tr>
+      <td> {{activeToUnactive}} </td>
+      <td> {{unactiveToActive}} </td>
+    </tr>
+  </table>
+
+<p></p>
+
+  <table border="1">
+    <tr>
+      <td> Active</td>
+      <td> Unactive </td>
+    </tr>
+
+    <tr>
+      <td>
+        <app-active-users></app-active-users>
+      </td>
+      <td>
+        <app-unactive-users></app-unactive-users>
+      </td>
+    </tr>
+  </table>
